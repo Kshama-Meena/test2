@@ -1,0 +1,255 @@
+body{
+   padding: 0px;
+  margin: 0px;
+   overflow-x: hidden;
+   font-family: 'inter',sans-serif;
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 1.65em;
+   font-family: 'Inter', sans-serif;
+  
+}
+:root {
+    --ast-global-color-0: #6852f4;
+    --ast-global-color-1: #5a43ef;
+    --ast-global-color-2: #1f2c33;
+    --ast-global-color-3: #45505f;
+    --ast-global-color-4: #f7fafd;
+    --ast-global-color-5: #FFFFFF;
+    --ast-global-color-6: #e7ecee;
+    --ast-global-color-7: #1f2c33;
+    --ast-global-color-8: #000000;
+}
+.p-b{
+  background-color:var(--ast-global-color-6) ;
+}
+.p-b1{
+  background-color:var(--ast-global-color-5) ;
+}
+.bb{
+  background-color: #f7fafd;
+    background-image: url("./Images/1.svg");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+.color{
+  color: var( --ast-global-color-0) ;
+}
+body, h1, h2, h3, h4, h5, h6,button{
+color:var(--ast-global-color-7);
+
+}
+.hh{
+  left: 1.5em;
+}
+.h11{
+  color:var(--ast-global-color-7); 
+  font-size: 48px;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 18px;
+}
+.nav-link:hover
+{
+     color: hsl(242, 98%, 68%); 
+}
+h1 h2{
+  
+  font: 64px ,inter,san-serif;
+   
+}
+p{
+    color: #45505f;
+    font: 16px ,inter,san-serif;
+}
+
+.custom-hover:hover{
+border: 1px solid hsl(242, 98%, 68%) !important;
+
+
+box-shadow: 20px 20px 20px 8px   hsl(240, 12%, 93%) !important;
+}
+
+.v-btn{
+  fill: var( --ast-global-color-0);
+    color: var( --ast-global-color-0);
+    background-color: #00000000;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: var( --ast-global-color-0);
+}
+
+.b-box{
+  border-left: 1px solid rgb(231,236,238);
+  
+}
+
+  
+.counter-title {
+  color: var(--ast-global-color-4);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+  
+
+  
+  .custom-letter-spacing h2, .custom-letter-spacing p {
+    letter-spacing: -2px; 
+    word-spacing: -2px;/* Adjust the value as per your needs */
+  }
+  @media (max-width: 767.98px) {
+    .rotate-sm-90 {
+        transform: rotate(90deg);
+        width: auto;  /* Maintain aspect ratio */
+        height: 100%; /* Ensure it fills the container vertically */
+    }
+}
+.c{
+  color: #5a43ef;
+}
+.container{
+  max-width: 1200px;
+}
+.ls{
+  letter-spacing:  5px;
+  }
+
+.ls1{
+  letter-spacing: -1px;
+}
+.lh1{
+  line-height: 1.4em;
+}
+.bgc{
+  background-image:url("Images\hero-vector-image-background (2).svg") ;
+  background-size: cover;
+  background-color:  rgb(249, 252, 252);
+  min-width: initial;
+  min-height: initial;
+
+}
+.horizontal-line{
+  width:initial; max-width: 50px;
+  height: 100px;
+}
+    /* Container for the divider */
+    .custom-divider {
+        position: relative;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    /* Separator line */
+    .custom-divider-separator {
+        display: inline-block;
+        width: 80%; /* Adjust the width of the divider */
+        height: 1px;
+        background-color: #ccc; /* Line color */
+        position: absolute;
+        top: 50%;
+        left: 10%; /* Adjust the left margin to center */
+        transform: translateY(-50%);
+    }
+
+    /* Optional - styling for text if any */
+    .custom-divider span::before {
+        content: " "; /* Optional: Text content in the center */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1em; /* Adjust the size */
+        height: 1px; /* Thickness of the text */
+        background-color: #ccc; /* Same color as divider line */
+    }
+
+.container {
+  padding-top: 12px;
+    padding-bottom: 12px;
+   padding-left: 0px;
+}
+.pt1{
+padding: 100px 0;
+}
+.t{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.f{
+  margin: 0px 40px;
+}
+.btn-bg{
+  border-radius: 6px;
+  
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left:20px;
+    background-color:var(--ast-global-color-0) ;
+    color: #fff;
+  
+}
+
+.btn-bg2
+{
+color:#6852f4;
+}
+
+.txt-bg1{
+  background-color: var( --ast-global-color-0);
+    background-image: url("./Images/cta-vector-image.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.txt-bg2{
+  background-color: var(--ast-global-color-7);
+    background-image: url("./Images/stats-vector-image-background.svg");
+    background-position: top center;
+    background-repeat: no-repeat
+}
+
+
+.elementor-shape-fill {
+  fill: var(--ast-global-color-7);  /* Custom color */
+  transition: fill 0.3s ease; 
+  z-index: -1; /* Optional transition */
+}
+
+.c-h{
+  height: 1900px;
+}
+
+/* Flip the shape on bottom - transform optimization */
+.elementor-shape[data-negative="false"] .elementor-shape-top, 
+.elementor-shape[data-negative="true"] .elementor-shape-bottom {
+  transform: rotate(180deg);  /* Apply rotation for negative bottom shapes */
+}
+
+/* You can adjust other specific shapes here if needed */
+
+
+.l-s{
+  font-weight: 500;
+  line-height: 1.4em;
+  letter-spacing: -1px;
+  word-spacing: -2px
+  
+}
+.s1{
+  
+  padding-top: 128px;
+  padding-bottom: 0px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+.l-s-1{
+  
+  line-height: 1.4em;
+  letter-spacing: -1px;
+  word-spacing: -2px
+  
+}

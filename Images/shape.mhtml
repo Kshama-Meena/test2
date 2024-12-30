@@ -1,0 +1,48 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://127.0.0.1:5500/n5.html
+Subject: Document
+Date: Mon, 16 Dec 2024 10:48:14 +0530
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--te75UVFgL0kW8IvWAR8v8lHT9yhOOMvzENKS1iwC4P----"
+
+
+------MultipartBoundary--te75UVFgL0kW8IvWAR8v8lHT9yhOOMvzENKS1iwC4P----
+Content-Type: text/html
+Content-ID: <frame-065E286186C058401F8A24CF86C49E13@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://127.0.0.1:5500/n5.html
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+ =20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0">
+  <title>Document</title>
+  <link rel=3D"stylesheet" href=3D"http://127.0.0.1:5500/s.css">
+</head>
+<body>
+ =20
+  <div class=3D"elementor-shape elementor-shape-top" data-negative=3D"false=
+">
+    <svg xmlns=3D"http://www.w3.org/2000/svg" viewBox=3D"0 0 1000 100" pres=
+erveAspectRatio=3D"none">
+  <path class=3D"elementor-shape-fill" d=3D"M1000,4.3V0H0v4.3C0.9,23.1,126.=
+7,99.2,500,100S1000,22.7,1000,4.3z"></path>
+</svg>
+
+
+</div>
+<!-- Code injected by live-server -->
+
+
+</body></html>
+------MultipartBoundary--te75UVFgL0kW8IvWAR8v8lHT9yhOOMvzENKS1iwC4P----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://127.0.0.1:5500/s.css
+
+@charset "utf-8";
+=0A
+------MultipartBoundary--te75UVFgL0kW8IvWAR8v8lHT9yhOOMvzENKS1iwC4P------

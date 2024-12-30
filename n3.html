@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart Example - Home</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Cart Icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    .cart-icon {
+      position: relative;
+      font-size: 30px;
+    }
+    .cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+    .cart-total {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Shopping Cart Icon with Count and Total Price -->
+<div class="container mt-4">
+  <a href="cart.html" class="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count" id="cartCount">0</span> 
+    <span class="cart-total" id="cartTotal">$0.00</span>
+  </a>
+</div>
+
+<!-- Products Section -->
+<div class="container mt-5">
+  <div class="row">
+    <!-- Product 1 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Product 1">
+        <div class="card-body">
+          <h5 class="card-title">Product 1</h5>
+          <p class="card-text">Price: $10</p>
+          <button class="btn btn-primary add-to-cart" data-product="Product 1" data-price="10">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- Product 2 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Product 2">
+        <div class="card-body">
+          <h5 class="card-title">Product 2</h5>
+          <p class="card-text">Price: $20</p>
+          <button class="btn btn-primary add-to-cart" data-product="Product 2" data-price="20">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <!-- Product 3 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://via.placeholder.com/150" class="card-img-top" alt="Product 3">
+        <div class="card-body">
+          <h5 class="card-title">Product 3</h5>
+          <p class="card-text">Price: $30</p>
+          <button class="btn btn-primary add-to-cart" data-product="Product 3" data-price="30">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS, jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Initialize cart from localStorage
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Function to update cart count and total price
+  function updateCart() {
+    // Update cart count
+    const cartCount = cart.length;
+    document.getElementById('cartCount').innerText = cartCount;
+
+    // Update total price
+    const cartTotal = cart.reduce((total, item) => total + item.price, 0);
+    document.getElementById('cartTotal').innerText = `$${cartTotal.toFixed(2)}`;
+
+    // Save updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  // Event listener for "Add to Cart" buttons
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+      const product = this.getAttribute('data-product');
+      const price = parseFloat(this.getAttribute('data-price'));
+
+      // Add item to cart
+      cart.push({ product, price });
+
+      // Update cart and localStorage
+      updateCart();
+    });
+  });
+
+  // Initial update on page load
+  updateCart();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal and Vertical Line Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .line {
+            background-color: #333;
+        }
+        .rotate-sm {
+            transform: rotate(90deg);
+            transform-origin: center;
+        }
+        @media (min-width: 768px) {
+            .rotate-sm {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-3"> <!-- Reduced top and bottom margin -->
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-start">
+            <!-- First Rating & Logo Section -->
+            <div class="d-flex align-items-center text-center text-md-start mb-3 mb-md-0 me-md-3">
+                <img src="Images/store-wp-logo.png" alt="WP Logo" class="img-fluid me-2 logo-image">
+                <div class="d-flex flex-column align-items-center align-items-md-start">
+                    <div class="rating-stars text-muted">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                    </div>
+                    <span class="text-muted">4.9/5 (4800 reviews)</span>
+                </div>
+            </div>
+
+            <!-- Horizontal/Vertical Line -->
+            <div class="d-flex align-items-center text-center justify-content-center my-2 mx-md-4">
+                <img src="./Images/Horizontal line.png" alt="Horizontal Line" class="img-fluid w-100 d-md-none rotate-sm">
+                <img src="./Images/Horizontal line.png" alt="Horizontal Line" class="img-fluid w-25 d-none d-md-block">
+            </div>
+
+            <!-- Second Rating & Logo Section -->
+            <div class="d-flex align-items-center text-center text-md-start ms-md-3">
+                <img src="Images/store-trustpilot-logo.png" alt="Trustpilot Logo" class="img-fluid me-2 logo-image">
+                <div class="d-flex flex-column align-items-center align-items-md-start">
+                    <div class="rating-stars mb-1">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                    </div>
+                    <span class="text-muted">4.9/5 (4800 reviews)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ 

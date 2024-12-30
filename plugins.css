@@ -1,0 +1,42 @@
+body{
+    padding: 0px;
+    margin: 0px;
+   overflow-x: hidden;
+   font-family: 'inter',sans-serif;
+   font-weight: 400;
+   font-size: 1rem;
+   line-height: 1.65em;
+   font-family: 'Inter', sans-serif;
+  background-color: #f7fafd;
+}
+:root {
+    --ast-global-color-0: #6852f4;
+    --ast-global-color-1: #5a43ef;
+    --ast-global-color-2: #1f2c33;
+    --ast-global-color-3: #45505f;
+    --ast-global-color-4: #f7fafd;
+    --ast-global-color-5: #FFFFFF;
+    --ast-global-color-6: #e7ecee;
+    --ast-global-color-7: #1f2c33;
+    --ast-global-color-8: #000000;
+}
+
+
+
+.p-b{
+    background-color:var(--ast-global-color-5) ;
+  }
+
+.f-h5 {
+    font-size: 1.25rem;
+}
+.f-w{
+  font-weight: 200px;
+}
+.bi{
+  background-image:url("./Images/about-section-image-backgound//(1/).jpg");
+}
+.l-s{
+  line-height: 1.4em;
+  letter-spacing: -3px
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cart-total {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Cart Page -->
+<div class="container mt-5">
+  <h3>Your Cart</h3>
+  <table class="table" id="cartTable">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="cartItemsList">
+      <!-- Cart items will be dynamically added here -->
+    </tbody>
+  </table>
+  <div>
+    <span class="cart-total">Total: $0.00</span>
+  </div>
+</div>
+
+<!-- Bootstrap JS, jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Fetch cart from localStorage
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Function to update cart items in the table
+  function updateCartItems() {
+    const cartItemsList = document.getElementById('cartItemsList');
+    cartItemsList.innerHTML = ''; // Clear the existing list
+
+    // Add cart items to table
+    cart.forEach((item, index) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${item.product}</td>
+        <td>$${item.price.toFixed(2)}</td>
+        <td><button class="btn btn-danger btn-sm remove-item" data-index="${index}">Remove</button></td>
+      `;
+      cartItemsList.appendChild(row);
+    });
+
+    // Update the total price
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    document.querySelector('.cart-total').innerText = `Total: $${total.toFixed(2)}`;
+  }
+
+  // Function to remove item from cart
+  function removeItemFromCart(index) {
+    cart.splice(index, 1); // Remove item from cart array
+    localStorage.setItem('cart', JSON.stringify(cart)); // Update localStorage
+
+    // Re-render cart items
+    updateCartItems();
+  }
+
+  // Event listener for "Remove" button inside the cart table
+  document.getElementById('cartItemsList').addEventListener('click', function(event) {
+    if (event.target.classList.contains('remove-item')) {
+      const index = event.target.getAttribute('data-index');
+      removeItemFromCart(index);
+    }
+  });
+
+  // Update cart items when page loads
+  updateCartItems();
+</script>
+
+</body>
+</html>
